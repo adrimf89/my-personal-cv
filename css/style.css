@@ -268,8 +268,7 @@ button:focus,
     }
 
 .header .profile-img {
-    margin-bottom : 80px;
-    margin-top: 70px;
+    margin-bottom : 50px;
     }
 
 .header .content-wrapper {
@@ -321,14 +320,6 @@ button:focus,
     position : sticky;
     top      : 0;
     }
-
-/*-------------------
- * Profile image
- *-------------------*/
-
- .rotate-image {
-     transform: rotate(90deg);
-     }
 
 /*-------------------
  * Social Icon
