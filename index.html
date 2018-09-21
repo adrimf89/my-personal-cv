@@ -37,6 +37,32 @@
           gtag('js', new Date());
 
           gtag('config', 'UA-119475157-1');
+        
+          window.onload = function(e){
+            //Calculate time working in current job
+            today = new Date()
+            past = new Date(2017,11,01)
+
+            var diff = Math.floor(today.getTime() - past.getTime());
+            var day = 1000 * 60 * 60 * 24;
+
+            var days = Math.floor(diff/day);
+            var months = Math.floor(days/31);
+            var years = Math.floor(months/12);
+
+            var labelTime = "November 2017 - Present · ";
+            if (years > 0){
+              labelTime += years;
+              labelTime += (years > 1) ? " years " : " year ";
+            }
+
+            if (months > 0){
+            labelTime += months
+            labelTime += (years > 1) ? " months" : " month";
+            }
+
+            document.getElementById('lblCurrentJobTime').innerHTML = labelTime
+          }
     </script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar">
@@ -266,7 +292,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="content-item">
-                    <small>November 2017 - Present</small>
+                    <small id="lblCurrentJobTime"></small>
                     <h3>Java Analyst Developer</h3>
                     <h4>Sopra Steria</h4>
 
@@ -305,7 +331,7 @@
                           </p>
                         </li>
                         <li>
-                          <small>March 2012 - March 2015 · 3 years 1 month</small>
+                          <small>March 2012 - March 2015 · 3 years</small>
                           <h3>Full Stack Developer</h3>
 
                           <p>
@@ -321,7 +347,7 @@
                 </div>
                 <!-- .experience-item -->
                 <div class="content-item">
-                    <small>March 2011 - March 2012 · 1 year 1 month</small>
+                    <small>March 2011 - March 2012 · 1 year</small>
                     <h3>Junior Software Developer</h3>
                     <h4>Deloitte</h4>
 
