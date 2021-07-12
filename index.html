@@ -56,9 +56,10 @@
               labelTime += (years > 1) ? " years " : " year ";
             }
 
+            months = months - (years * 12);
             if (months > 0){
-            labelTime += months
-            labelTime += (months > 1) ? " months" : " month";
+              labelTime += months
+              labelTime += (months > 1) ? " months" : " month";
             }
 
             document.getElementById('lblCurrentJobTime').innerHTML = labelTime
